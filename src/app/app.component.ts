@@ -5,4 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  loadFeature = 'recipes';
+
+  naviagte(naviagte: string) {
+    this.loadFeature = naviagte;
+  }
+
+  showRecipes() {
+    return this.loadFeature === 'recipes' ? true : false;
+  }
+
+  showShoppingList() {
+    return this.loadFeature === 'shopping-list' ? true : false;
+  }
+}
