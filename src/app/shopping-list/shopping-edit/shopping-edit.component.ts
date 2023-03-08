@@ -5,7 +5,7 @@ import {
   ViewChild,
   EventEmitter,
 } from '@angular/core';
-import { Ingredient } from 'src/app/shared/ingredient.model';
+import { Ingredient } from 'src/app/shared/model/ingredient.model';
 
 @Component({
   selector: 'app-shopping-edit',
