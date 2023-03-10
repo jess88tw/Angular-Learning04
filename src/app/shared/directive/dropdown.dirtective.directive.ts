@@ -23,8 +23,9 @@ export class DropdownDirtectiveDirective {
 
   // answer
   @HostBinding('class.open') onClick = false;
-  @HostListener('click', ['$event']) click(event: Event) {
-    console.log(event);
-    this.onClick = !this.onClick;
+  @HostListener('document:click', ['$event']) toggleOpen(event: Event) {
+    this.onClick = this.elRef.nativeElement.contains(event.target)
+      ? !this.onClick
+      : false;
   }
 }
